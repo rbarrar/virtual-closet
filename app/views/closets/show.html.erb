@@ -4,6 +4,7 @@
   <strong>Name:</strong>
   <%= @closet.name %>
 </p>
-
-<%= link_to 'Edit', edit_closet_path(@closet) %> |
+<%= render "items/new", locals: {closet: @closet} %>
+<%= render "items/index", locals: {closet: @closet} %>
+<br>
 <%= link_to 'Back', closets_path %>

@@ -1,3 +1,4 @@
+<h1>New Item</h1>
 <%= form_for(@item) do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -24,9 +25,12 @@
     <%= f.check_box :dirty %>
   </div>
   <div class="field">
-    <%= f.hidden_field :closet_id, :value => closet.id %>
+    <%= f.hidden_field :closet_id, :value => @closet.id %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<%= link_to 'Back', items_path %>

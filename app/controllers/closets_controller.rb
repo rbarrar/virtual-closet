@@ -12,6 +12,8 @@ class ClosetsController < ApplicationController
   # GET /closets/1
   # GET /closets/1.json
   def show
+    @item = Item.new
+    @items = Item.all
   end
 
   # GET /closets/new
